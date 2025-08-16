@@ -46,7 +46,7 @@ export default function Carousel({
   }, [responsive, slidesToShow]);
 
   const goTo = (idx: number) => {
-    setCurrent((prev) => {
+    setCurrent(() => {
       if (idx < 0) return total - visibleSlides;
       if (idx > total - visibleSlides) return 0;
       return idx;

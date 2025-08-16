@@ -13,7 +13,7 @@ interface ProductGridProps {
 
 export default function ProductGrid({ filters = {} }: ProductGridProps) {
   const dispatch = useDispatch();
-  const { products, loading, error, totalProducts, currentPage, totalPages } = useSelector(
+  const { products, loading, error, currentPage, totalPages } = useSelector(
     (state: RootState) => state.product
   );
 
