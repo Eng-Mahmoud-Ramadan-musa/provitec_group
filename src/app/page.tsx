@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="font-sans flex flex-col min-h-screen bg-button">
       <Header />
-      <main className="flex flex-col gap-8 py-16 px-8 items-center sm:items-start w-full flex-1 overflow-hidden bg-background2">
+      <main className="relative flex flex-col gap-8 py-16 px-8 items-center sm:items-start w-full flex-1 overflow-hidden bg-background2">
         <Hero />
         <ViewCompany />
         <Team />

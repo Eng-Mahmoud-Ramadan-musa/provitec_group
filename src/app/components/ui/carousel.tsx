@@ -111,12 +111,12 @@ export default function Carousel({
         </>
       )}
       {/* Dots */}
-      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2 ">
+      <div className="absolute bottom-2  left-1/2 -translate-x-1/2 flex gap-2 ">
         {Array.from({ length: total - visibleSlides + 1 }).map((_, idx) => (
           <button
             key={idx}
             onClick={() => goTo(idx)}
-            className={`w-2 h-2 rounded-full ${current === idx ? 'bg-button' : 'bg-gray-300'}`}
+            className={`w-2 h-2 rounded-full border border-text ${current === idx ? 'bg-button' : 'bg-gray-300'}`}
             aria-label={`Go to slide ${idx + 1}`}
           />
         ))}

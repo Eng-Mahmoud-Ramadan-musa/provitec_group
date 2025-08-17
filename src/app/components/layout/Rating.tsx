@@ -68,7 +68,7 @@ function RatingItem({ name, rating, comment, avatar }: typeof ratings[number]) {
         <Avatar className="w-16 h-16 border border-background bg-white shadow-sm">
           <AvatarImage src={avatar} alt={name} className="object-cover" />
         </Avatar>
-        <h2 className="text-lg font-semibold text-text">{name}</h2>
+        <h2 className="text-lg font-semibold text-background">{name}</h2>
         {renderStars(rating)}
         <p className="text-sm text-gray-500">{comment}</p>
       </div>
@@ -81,7 +81,7 @@ export default function Rating() {
     <div className="w-full flex flex-col justify-center items-center lg:w-2/3 mx-auto rounded-xl overflow-hidden shadow-md">
       <h2 className="text-3xl font-bold text-center mb-10">Customers Rating</h2>
       <Carousel
-        className="bg-[#f9f6f1] rounded-lg"
+        className="bg-text rounded-lg"
         autoSlideInterval={4000}
         slidesToShow={3}
 
