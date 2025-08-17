@@ -39,7 +39,7 @@ export default function Header() {
       {/* Mobile Nav */}
       <div
         className={cn(
-          "md:hidden flex-col bg-[#1f2b53] w-full px-5 py-4 gap-4 overflow-hidden transition-all duration-300 ease-linear",
+          "md:hidden flex-col bg-background w-full px-5 py-4 gap-4 overflow-hidden transition-all duration-300 ease-linear",
           open ? "flex h-[calc(100vh-56px)]" : "hidden h-0"
         )}
       >

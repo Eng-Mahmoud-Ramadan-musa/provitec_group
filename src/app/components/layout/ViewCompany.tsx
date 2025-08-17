@@ -61,14 +61,14 @@ const COMPANIES: Company[] = [
 ];
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
-  <div className="relative flex-shrink-0 w-full h-92 overflow-hidden rounded-lg group">
+  <div className="relative flex-shrink-0 w-full h-full overflow-hidden rounded-lg group">
     <Image
       src={project.image}
       alt={project.title}
-      fill
-      loading="lazy"
-      quality={85}
-      className="object-cover px-1 transition-transform duration-300 group-hover:scale-105"
+      width={1000}
+      height={1000}
+      quality={100}
+      className="w-full h-full px-1 transition-transform duration-300 group-hover:scale-105"
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -83,7 +83,7 @@ const CompanySection: React.FC<{ company: Company }> = ({ company }) => (
     <div className="flex items-center justify-between px-2 mb-4">
       <h2 className="text-2xl font-bold text-white">{company.title}</h2>
       <Link
-        href={`/branch/${company.title.toLowerCase()}`}
+        href={`/branch/${company.title.toLowerCase().replace(/\s+/g, "-")}`}
         className="text-white hover:scale-105 duration-200 ease-linear underline hover:text-blue-300 transition-colors"
         aria-label={`View ${company.title} branch`}
       >
@@ -92,13 +92,14 @@ const CompanySection: React.FC<{ company: Company }> = ({ company }) => (
     </div>
 
     {/* Carousel بـ children */}
-    <Carousel className="h-[400px] pt-1" autoSlideInterval={5000}>
+    <Carousel className="min-h-[250px] md:h-[400px] pt-1" autoSlideInterval={5000}>
       {company.projects.map((project, pIdx) => (
         <ProjectCard key={`${company.title}-${pIdx}`} project={project} />
       ))}
     </Carousel>
   </div>
 );
+
 
 export default function ViewCompany() {
   return (
