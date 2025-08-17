@@ -30,7 +30,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setOpen(!open)}
-          className="block md:hidden w-8 h-8 cursor-pointer hover:bg-white/30 transition-all duration-200 ease-linear ps-2 rounded-sm"
+          className="block md:hidden text-text w-8 h-8 cursor-pointer hover:bg-white/30 transition-all duration-200 ease-linear ps-2 rounded-sm"
         >
           {open ? <IoClose size={20} /> : <IoMenu size={20} />}
         </button>

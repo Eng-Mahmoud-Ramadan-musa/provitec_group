@@ -18,11 +18,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1f2b53;
-    --text: #f1f1f1;
-    --button: #4ea8de;
-    --background2: #3a5ba0;
+    --background: #1f2b53;   /* الأساسي */
+    --background2: #3a5ba0;  /* طبقة ثانية */
+    --text: #f1f1f1;         /* نص أساسي */
+    --text-muted: #cfd8e3;   /* نصوص ثانوية */
+    --button: #4ea8de;       /* أزرار */
+    --accent: #f4b400;       /* لون مميز (ذهبي/أصفر) */
   }
+  
 }
 
 body {
